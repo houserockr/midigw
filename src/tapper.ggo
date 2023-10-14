@@ -1,0 +1,21 @@
+package "midi"
+version "0.1"
+
+# Options
+option  "serial"         s "Path to the serial device"
+        string default="/dev/ttyS0" optional
+
+option  "tempo"          t "Desired tempo in bpm"
+        int default="120" optional
+
+option  "channel"        c "Desired MIDI channel (0-15)"
+        int default="0" optional
+
+option  "message"        m "Desired MIDI message number (0-255)"
+        int default="0" optional
+
+option  "value"          v "Desired MIDI message value (0-255)"
+        int default="0" optional
+
+option  "repeats"        r "Desired number of repeats, runs forever by default"
+        int default="-1" optional

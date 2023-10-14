@@ -1,0 +1,14 @@
+[Unit]
+Description=MIDI REST Gateway Service
+After=network.target
+StartLimitIntervalSec=0
+
+[Service]
+Type=simple
+Restart=always
+RestartSec=5
+User=mef
+ExecStart=/usr/local/bin/midi-gw.py
+
+[Install]
+WantedBy=multi-user.target
